@@ -5,9 +5,12 @@
     <title>title</title>
   </head>
   <body>
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css"/
+ <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="http://resources/demos/style.css">
 
-  
+  <p>Date: <input type="text" id="datepicker"></p>
+
 <table id="myTable" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -422,7 +425,27 @@
     </table>
 
 
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
-DataTables designed and created by SpryMedia Ltd © 2007-2016. MIT licensed. Our Supporters
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+<script>
+	    $(document).ready(function() {
+
+		    $('#myTable').DataTable( {
+		        "scrollY": 200,
+		        "scrollX": true
+		    } );
+
+		});
+		</script>
+
+ <script>
+ 		$( function() {
+    	$( "#datepicker" ).datepicker();
+  		} );
+ </script>
+
   </body>
 </html>
